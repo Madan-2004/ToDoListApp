@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: cursive;
+}
+
+.container{
+    background-color: white;
+    width: 90%;
+    max-width: 550px;
+    margin: 100px auto 20px;
+    border-radius: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 30px;
+    align-items: center;
+}
+
+.container h1 img{
+    height: 25px;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    position: relative;
+}
+
+.input input{
+    outline: 0;
+    border: 0;
+    background-color: rgb(237,236,240);
+    border-radius: 30px;
+    height: 60px;
+    flex: 1;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.input button{
+    position: absolute;
+    right: 0;
+    height: 60px;
+    font-size: 20px;
+    outline: none;
+    border: 0;
+    width: 80px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(253,100,59);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.input button:hover{
+    background-color: rgb(249, 60, 3);
+}
+
+.tasks ul{
+    margin-left: 60px;
+}
+
+.tasks ul li{
+    font-size: 20px;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 50px;
+}
+
+.tasks ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 0px;    
+}
+
+.checked{
+    text-decoration: line-through;
+    color: rgb(148,148,148);
+}
+
+.tasks ul li.checked::before{
+    background-image:url('images/checked.png');
+}
+
+.tasks ul li span{
+    position: absolute;
+    text-align: center;
+    right: 50px;
+    color:rgb(249, 60, 3);
+    height: 30px;
+    width: 25px;
+    transition: 0.2s ease-in-out;
+    border-radius: 20px;
+}
+
+.tasks ul li span:hover{
+    background-color: rgb(148,148,148);
+}
